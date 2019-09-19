@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{38726434-720C-BB86-E8A4-F1BF1D085F3F}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/Flame0.shader">
+    <Files>
+      <File FileName="Assets/Shaders/Test0.shader" Line="8" Column="10" />
+      <File FileName="Assets/Shaders/PostEffect.cs" Line="9" Column="72" />
+      <File FileName="Assets/Shaders/PostEffect0.shader" Line="11" Column="1" />
+      <File FileName="Assets/Shaders/PostEffect1.shader" Line="60" Column="70" />
+      <File FileName="Assets/Shaders/Flame0.shader" Line="1" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

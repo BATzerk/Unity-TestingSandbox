@@ -1,4 +1,4 @@
-﻿Shader "Custom/PostEffect"
+﻿Shader "Custom/Tests/PostEffect0"
 {
     Properties
     {

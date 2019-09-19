@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: m_TileOverlay
   m_Shader: {fileID: 4800000, guid: a78c0b228812a9b44a541f3a05a96faa, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
