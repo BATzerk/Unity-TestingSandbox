@@ -100,9 +100,7 @@ Shader "Custom/Water0"
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
                 OUT.worldPosition = v.vertex;
                 OUT.vertex = UnityObjectToClipPos(OUT.worldPosition);
-
                 OUT.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
-
                 OUT.color = v.color * _Color;
                 return OUT;
             }
@@ -110,13 +108,27 @@ Shader "Custom/Water0"
             fixed4 frag(v2f IN) : SV_Target
             {
                 float t = _Time[1];
-                float2 mainTexOffset = float2(-t*_MainTexSpeed, -t*_MainTexSpeed);
-                float2 dispPos = float2(t*_DispSpeed, t*_DispSpeed);
-                float2 mainTexPos = IN.texcoord;
-                mainTexPos += mainTexOffset;
-                mainTexPos += tex2D(_DispTex, (IN.texcoord+mainTexOffset+dispPos) * _DispFreq) * _DispMag;
-                half4 color = (tex2D(_MainTex, mainTexPos));
-                color *= IN.color;
+                
+                float2 dispPos = float2(IN.texcoord.x+t*_DispSpeed, IN.texcoord.y+t*_DispSpeed);
+                
+                float2 mtPos = IN.texcoord;
+                mtPos += float2(-t, -t) * _MainTexSpeed; // main tex scroll.
+                mtPos += tex2D(_DispTex, dispPos*_DispFreq) * _DispMag; // disp offset.
+                
+                
+                half4 color = tex2D(_MainTex, mtPos) * IN.color;
+                return color;
+            }
+        ENDCG
+        }
+    }
+}
+
+
+
+
+
+
 
                 //#ifdef UNITY_UI_CLIP_RECT
                 //color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
@@ -125,10 +137,3 @@ Shader "Custom/Water0"
                 //#ifdef UNITY_UI_ALPHACLIP
                 //clip (color.a - 0.001);
                 //#endif
-
-                return color;
-            }
-        ENDCG
-        }
-    }
-}

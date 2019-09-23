@@ -77,10 +77,10 @@ Material:
     - _ColorMask: 15
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DispFreq: 0.08
+    - _DispFreq: 0.1
     - _DispMag: 1.4
     - _DispScale: 0.01
-    - _DispSpeed: 0.1
+    - _DispSpeed: 0.05
     - _DistortionAmount: 0.75
     - _DistortionAmp: 0.5
     - _DistortionFreq: -0.31
@@ -89,7 +89,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MainTexSpeed: 0.05
+    - _MainTexSpeed: 0.07
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
